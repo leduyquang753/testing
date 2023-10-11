@@ -2,28 +2,28 @@
 
 #include "joystick.h"
 
-// Test cases from control flow method.
-TEST(ControlFlow, CF1) {
-	EXPECT_EQ(getJoystickDirection(3, 0), Direction::Invalid);
+// Test cases from data flow method.
+TEST(DataFlow, DF1) {
+	EXPECT_EQ(getJoystickDirection(1.8, 346), Direction::Right);
 }
-TEST(ControlFlow, CF2) {
-	EXPECT_EQ(getJoystickDirection(1.8, -8), Direction::Invalid);
+TEST(DataFlow, DF2) {
+	EXPECT_EQ(getJoystickDirection(3.8, 0), Direction::Invalid);
 }
-TEST(ControlFlow, CF3) {
-	EXPECT_EQ(getJoystickDirection(0.3, 88), Direction::None);
+TEST(DataFlow, DF3) {
+	EXPECT_EQ(getJoystickDirection(0, -84), Direction::Invalid);
 }
-TEST(ControlFlow, CF4) {
-	EXPECT_EQ(getJoystickDirection(2, 39), Direction::Right);
+TEST(DataFlow, DF4) {
+	EXPECT_EQ(getJoystickDirection(0, 10), Direction::None);
 }
-TEST(ControlFlow, CF5) {
-	EXPECT_EQ(getJoystickDirection(1.5, 83), Direction::Up);
+TEST(DataFlow, DF5) {
+	EXPECT_EQ(getJoystickDirection(0.8, 38), Direction::Right);
 }
-TEST(ControlFlow, CF6) {
-	EXPECT_EQ(getJoystickDirection(1.6, 194), Direction::Left);
+TEST(DataFlow, DF6) {
+	EXPECT_EQ(getJoystickDirection(0.8, 64), Direction::Up);
 }
-TEST(ControlFlow, CF7) {
-	EXPECT_EQ(getJoystickDirection(0.6, 285), Direction::Down);
+TEST(DataFlow, DF7) {
+	EXPECT_EQ(getJoystickDirection(1.6, 214), Direction::Left);
 }
-TEST(ControlFlow, CF8) {
-	EXPECT_EQ(getJoystickDirection(1.7, 356), Direction::Right);
+TEST(DataFlow, DF8) {
+	EXPECT_EQ(getJoystickDirection(2, 264), Direction::Down);
 }
